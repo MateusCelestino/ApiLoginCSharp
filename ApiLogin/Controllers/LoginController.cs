@@ -29,7 +29,7 @@ namespace ApiLogin.Controllers
         {
             var listaUsuario = PegarDados();
             var usuario = listaUsuario.Where(item => item.Email == dados.Email && item.Senha == dados.Senha).FirstOrDefault();
-            if (listaUsuario != null)
+            if (usuario != null)
             {
                 return Ok();
             }
